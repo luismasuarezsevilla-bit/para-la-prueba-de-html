@@ -1,0 +1,189 @@
+body{
+font-family:Arial;
+background:#040407;
+color:white;
+margin:0;
+padding:0;
+}
+
+header{
+text-align:center;
+padding:40px;
+background:linear-gradient(90deg,#00f7ff,#ff00f7);
+}
+
+header h1{
+font-size:40px;
+}
+
+section{
+padding:40px;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+margin-bottom:20px;
+color:#08dbe2;
+}
+
+/* PROYECTOS */
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#111;
+padding:20px;
+border-radius:10px;
+flex:1;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#1a1a1a;
+}
+
+/* FORMULARIO */
+
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:400px;
+}
+
+input, textarea{
+padding:10px;
+border:none;
+border-radius:5px;
+}
+
+button{
+background:#cae0e0;
+border:none;
+padding:10px;
+border-radius:20px;
+cursor:pointer;
+font-weight: bold;
+font-size: 17px;
+position: relative;
+
+}
+
+button:hover{
+background:#e837e5;
+color:rgb(172, 10, 10);
+
+}
+
+/*decoracion del encabezado*/
+
+header  {
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        red, blue, deeppink, blue,
+         red, deeppink, blue
+    );
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(100px);
+    animation: glowing 20s linear infinite;
+}
+
+
+@keyframes glowing {
+    0%{
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* para quitar la decoracion del link*/
+.link {
+    text-decoration: none;
+   
+}
+
+nav {
+    background: #111;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    
+   
+    animation: glowing 20s linear infinite;
+}
+.logo{
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+   
+   
+}
+
+.menu li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #00c6ff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+.menu li a:hover {
+    color: #fff;
+}
+
+menu li a:hover::after {
+    width: 100%;
+}
+
