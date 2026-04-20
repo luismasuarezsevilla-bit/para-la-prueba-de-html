@@ -1,0 +1,109 @@
+🔹 1. Subrayado animado al pasar el mouse
+
+Un efecto limpio y moderno:
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: yellow;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+🔹 2. Cambio de color con transición suave
+
+Simple pero elegante:
+
+nav a {
+  color: white;
+  transition: color 0.3s ease, background 0.3s ease;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: black;
+  background: yellow;
+  border-radius: 5px;
+}
+🔹 3. Efecto “zoom” al pasar el mouse
+
+Hace que el menú se vea más interactivo:
+
+nav a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.2);
+}
+🔹 4. Menú con efecto deslizante (slide)
+
+Ideal para menús modernos:
+
+nav a {
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: yellow;
+  top: 0;
+  left: -100%;
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+nav a:hover::before {
+  left: 0;
+}
+🔹 5. Menú tipo botón con animación “bounce”
+
+Más llamativo:
+
+nav a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+nav a:hover {
+  transform: translateY(-5px);
+}
+🔹 6. Animación de aparición (fade-in)
+
+Para cuando carga la página:
+
+nav {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: aparecer 0.8s forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
